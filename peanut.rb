@@ -1,6 +1,7 @@
+#!/usr/bin/ruby
+
 require 'rubygems'
 require 'yajl'
-require 'FileUtils'
 
 module Peanut
   

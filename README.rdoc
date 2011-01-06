@@ -15,3 +15,12 @@ Assuming such an alias is setup, usage is pretty easy:
   peanut list                 shows everything currently in your bucket
   peanut delete <key>         removes the key/value pair where key matches
   peanut get <key>            copies the value of key to your clipboard
+
+== Requirements
+
+Requires the yajl gem. Install rajl with:
+
+  gem sources -a http://gemcutter.org
+  sudo gem install yajl-ruby
+
+Peanut should function on Linux, BSD (assuming you run X), or Mac OS X.
