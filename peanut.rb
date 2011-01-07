@@ -97,7 +97,7 @@ module Peanut
       def copy_to_clipboard(string)
         cmd = 
         if RUBY_PLATFORM =~ /linux/
-          "xclipboard -selection clipboard"
+          "xclip -selection clipboard"
         else
           "pbcopy"
         end
