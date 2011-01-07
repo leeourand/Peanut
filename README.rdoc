@@ -1,6 +1,6 @@
 = Peanut
 
-Peanut is a cheap knockoff of Zach Holman's Boom gem. Instead of managing different lists, Peanut uses a "Bucket" to dump all of your items.
+Peanut is a cheap knockoff of the Boom gem. Instead of managing different lists, Peanut uses a "Bucket" to dump all of your items.
 
 == Usage
 
