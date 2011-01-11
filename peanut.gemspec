@@ -1,4 +1,3 @@
-# -*- encoding: utf-8 -*-
 require File.expand_path("../lib/peanut/version", __FILE__)
 
 Gem::Specification.new do |s|
@@ -12,7 +11,7 @@ Gem::Specification.new do |s|
   s.description = "Peanut is a simple command line clipboard manager similar to BOOM. We use key/value stores instead of lists, keeping things simple."
 
   s.required_rubygems_version = ">= 1.3.6"
-  s.rubyforge_project         = "boom"
+  s.rubyforge_project         = "peanut"
   
   s.add_dependency 'yajl-ruby'
 
