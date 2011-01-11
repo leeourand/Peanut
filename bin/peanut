@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'rubygems' rescue LoadError
+$:.unshift File.dirname(__FILE__) + '/../lib/'
+require 'peanut'
+
+Peanut::Command.run(*ARGV)

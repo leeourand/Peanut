@@ -1,26 +1,22 @@
 = Peanut
 
-Peanut is a cheap knockoff of Zach Holman's Boom gem. Instead of managing different lists, Peanut uses a "Bucket" to dump all of your items.
+Peanut is a key/value store kind of similar to BOOM. Instead of managing lists, we store everything in 1 key value store to keep things simple.
 
 == Usage
 
-I'd recommend using an alias for Peanut. Something like:
-
-  alias peanut="/path/to/your/peanut.rb"
-
-Assuming such an alias is setup, usage is pretty easy:
+Usage is pretty straight forward:
 
   peanut help                 show a quick help overview
-  peanut add <key> <value>    adds the key/value pair to your bucket
+  peanut <key> <value>    		adds the key/value pair to your bucket
+  peanut rm <key>         		removes the key/value pair where key matches
+  peanut <key>            		copies the value of key to your clipboard
+	peanut <key> v							adds the value of your clipboard to key
   peanut list                 shows everything currently in your bucket
-  peanut delete <key>         removes the key/value pair where key matches
-  peanut get <key>            copies the value of key to your clipboard
+
+== Installation
+
+gem install zap
 
 == Requirements
 
-Requires the yajl gem. Install rajl with:
-
-  gem sources -a http://gemcutter.org
-  sudo gem install yajl-ruby
-
-Peanut should function on Linux, BSD (assuming you run X), or Mac OS X.
+Peanut should function on Linux, BSD (assuming you run X), or Mac OS X. There are currently a few bugs on some Linux systems I've tested. xclip seems to hang, although it actually functions. I'm working on that!
