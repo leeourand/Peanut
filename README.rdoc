@@ -15,7 +15,7 @@ Usage is pretty straight forward:
 
 == Installation
 
-gem install zap
+gem install peanut
 
 == Requirements
 
