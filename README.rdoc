@@ -7,10 +7,10 @@ Peanut is a key/value store kind of similar to BOOM. Instead of managing lists, 
 Usage is pretty straight forward:
 
   peanut help                 show a quick help overview
-  peanut <key> <value>    		adds the key/value pair to your bucket
-  peanut rm <key>         		removes the key/value pair where key matches
-  peanut <key>            		copies the value of key to your clipboard
-	peanut <key> v							adds the value of your clipboard to key
+  peanut <key> <value>        adds the key/value pair to your bucket
+  peanut rm <key>             removes the key/value pair where key matches
+  peanut <key>                copies the value of key to your clipboard
+  peanut <key> v              adds the value of your clipboard to key
   peanut list                 shows everything currently in your bucket
 
 == Installation
