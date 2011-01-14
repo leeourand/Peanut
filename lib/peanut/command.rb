@@ -9,7 +9,7 @@ module Peanut
         return help unless key
         return send key, value if is_arged_keyword?(key)
         return send key if is_keyword?(key)
-        return save key, value if key && value
+        return save! key, value if key && value
         return get key
       end
       
@@ -46,10 +46,10 @@ module Peanut
         end
       end
     
-      def save(key, val)
+      def save!(key, val)
         val = Clipboard.paste if val == 'v'
         store[key.intern] = val
-        store.save
+        store.save!
         puts "Saved '#{val}' as '#{key}'"
       end
     
@@ -59,7 +59,7 @@ module Peanut
     
       def rm(key)
         store[key] = nil
-        store.save
+        store.save!
         puts "Deleted the value with the key '#{key}'"
       end
     

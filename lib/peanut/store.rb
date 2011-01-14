@@ -24,7 +24,7 @@ module Peanut
       return store[key]
     end
     
-    def save
+    def save!
       File.open(file, 'w') { |f| f.write(to_json) }
     end
     
