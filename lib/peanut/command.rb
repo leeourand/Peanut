@@ -48,7 +48,7 @@ module Peanut
     
       def save!(key, val)
         val = Clipboard.paste if val == 'v'
-        store[key.intern] = val
+        store[key.to_sym] = val
         store.save!
         puts "Saved '#{val}' as '#{key}'"
       end
