@@ -20,14 +20,14 @@ module Peanut
       end
       
       def list
-        puts "Your peanut bucket: \n#{'-' * 20}"
+        Peanut::output "Your peanut bucket: \n#{'-' * 20}"
         store.each_pair do |key, value|
-          puts "#{key}: #{value}"
+          Peanut::output "#{key}: #{value}"
         end
       end   
       
       def help
-        puts %{
+        Peanut::output %{
             #{executable} <key> <value>      sets the "key" value to "value"
             #{executable} <key>              copies the value for "key" to the clipboard
             #{executable} rm <foo>           removes the key/value pair where the key = foo
@@ -40,9 +40,9 @@ module Peanut
       def get(key)
         if val = store[key]
           Clipboard.copy(val)
-          puts "Copied '#{val}' to the clipboard!"
+          Peanut::output "Copied '#{val}' to the clipboard!"
         else
-          puts "No value stored with key '#{key}'"
+          Peanut::output "No value stored with key '#{key}'"
         end
       end
     
@@ -50,7 +50,7 @@ module Peanut
         val = Clipboard.paste if val == 'v'
         store[key.to_sym] = val
         store.save!
-        puts "Saved '#{val}' as '#{key}'"
+        Peanut::output "Saved '#{val}' as '#{key}'"
       end
     
       def executable
@@ -60,7 +60,7 @@ module Peanut
       def rm(key)
         store[key] = nil
         store.save!
-        puts "Deleted the value with the key '#{key}'"
+        Peanut::output "Deleted the value with the key '#{key}'"
       end
     
       def is_keyword?(word)

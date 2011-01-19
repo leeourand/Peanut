@@ -13,6 +13,7 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 
 require 'peanut'
 
+
 def peanut_json(name)
   #Peanut::Store.any_instance.stubs(:json_file).
   #returns("test/examples/#{name}.json")

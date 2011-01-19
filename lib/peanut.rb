@@ -6,5 +6,9 @@ module Peanut
   require 'peanut/store'
   require 'peanut/command'
 
+# Makes for easier testing if I/O
+  def self.output(string)
+    puts string
+  end
 end
 
