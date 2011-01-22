@@ -9,7 +9,7 @@ module Peanut
           "pbcopy"
         end
         
-        `echo #{string} | tr -d "\n" | #{cmd}`        
+        system("echo -n #{string} | #{cmd}")        
       end
       
       def paste
