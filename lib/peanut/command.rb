@@ -40,7 +40,7 @@ module Peanut
       def get(key)
         if val = store[key]
           Clipboard.copy(val)
-          Peanut::output "Copied '#{val}' to the clipboard!"
+          Peanut::output "Copied #{key} to the clipboard!"
         else
           Peanut::output "No value stored with key '#{key}'"
         end

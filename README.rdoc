@@ -19,4 +19,4 @@ gem install peanut
 
 == Requirements
 
-Peanut should function on Linux, BSD (assuming you run X), or Mac OS X. There are currently a few bugs on some Linux systems I've tested. xclip seems to hang, although it actually functions. I'm working on that!
+Peanut should function on Linux, BSD (assuming you run X), or Mac OS X. On Linux, it is assumed that xclip is installed.
